@@ -3,7 +3,8 @@
 
 html,
 body,
-#root {
+#root,
+.container {
     min-height: 100%;
     background: $body-bg;
     color: $text-color;
@@ -39,16 +40,13 @@ a {
 }
 
 .container {
-    min-height: 100%;
     display: grid;
     grid: auto-flow / 30vw auto;
 }
 
 article {
     grid-column: 2;
-    padding: 40px;
-    padding-top: 28px;
-    margin-bottom: 5rem;
+    padding: 28px 40px 5rem 40px;
 }
 
 // Small devices (landscape phones, less than 768px)
