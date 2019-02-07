@@ -1,0 +1,78 @@
+
+@function color-yiq($color, $dark: $text-color, $light: #fff) {
+    $r: red($color);
+    $g: green($color);
+    $b: blue($color);
+    $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+    $yiq-contrasted-threshold: 150;
+
+    @if ($yiq >= $yiq-contrasted-threshold) {
+        @return $dark;
+    }
+
+    @else {
+        @return $light;
+    }
+}
+
+@mixin hover {
+    &:hover { @content; }
+}
+
+@mixin hover-focus {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+@mixin plain-hover-focus {
+    &,
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+@mixin hover-focus-active {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+
+@mixin button-variant($background, $border: $background, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
+    background-color: $background;
+    color: color-yiq($background);
+    border-color: $border;
+
+    @include hover {
+        background-color: $hover-background;
+        color: color-yiq($hover-background);
+        border-color: $hover-border;
+    }
+
+    &:focus {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: 0 0 0 0.2rem rgba(mix(color-yiq($background), $border, 15%), 0.5);
+    }
+
+    // Disabled comes first so active can properly restyle
+    &:disabled {
+        color: color-yiq($background);
+        background-color: $background;
+        border-color: $border;
+    }
+
+    &:not(:disabled):not(.disabled):active {
+        color: color-yiq($active-background);
+        background-color: $active-background;
+        border-color: $active-border;
+
+        &:focus {
+            // Avoid using mixin so we can pass custom focus shadow properly
+            box-shadow: 0 0 0 0.2rem rgba(mix(color-yiq($background), $border, 15%), 0.5);
+        }
+    }
+}

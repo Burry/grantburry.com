@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, oneOfType, node, arrayOf, object, array } from 'prop-types';
+import { string, oneOfType, object, array } from 'prop-types';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './NavLink.module.scss';
@@ -18,8 +18,7 @@ const NavLink = ({ to, label, icon, children, ...props }) => (
 NavLink.propTypes = {
     to: string.isRequired,
     label: string.isRequired,
-    icon: oneOfType([object, array, string]).isRequired,
-    children: oneOfType(node, arrayOf(node)).isRequired
+    icon: oneOfType([object, array, string]).isRequired
 };
 
 export default NavLink;

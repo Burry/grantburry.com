@@ -1,0 +1,127 @@
+@import '../../variables';
+@import '../../mixins';
+
+.root {
+    height: 100%;
+    position: fixed;
+    display: grid;
+    grid: auto 3rem / auto;
+    grid-column: 1;
+}
+
+header {
+    grid-row: 1;
+    padding: 40px;
+}
+
+.triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-style: solid;
+}
+
+.t1 {
+    border-width: $triangle-height 25vw 0 0;
+    border-color: $primary transparent transparent transparent;
+    z-index: 3;
+}
+
+.t2 {
+    border-width: $triangle-height 27.5vw 0 0;
+    border-color: $secondary transparent transparent transparent;
+    z-index: 2;
+}
+
+.t3 {
+    border-width: $triangle-height 30vw 0 0;
+    border-color: $teritary transparent transparent transparent;
+    z-index: 1;
+}
+
+.logoLink {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 100px;
+    line-height: 0;
+    z-index: 5;
+}
+
+.logo {
+    height: 50px;
+}
+
+.footer {
+    grid-row: 2;
+    height: 1.5rem;
+    padding-left: 40px;
+    opacity: 0.25;
+    font-weight: 200;
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    .t1 {
+        border-width: $triangle-height 27.5vw 0 0;
+    }
+
+    .t2 {
+        border-width: $triangle-height 30vw 0 0;
+    }
+
+    .t3 {
+        border-width: $triangle-height 32.5vw 0 0;
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .t1 {
+        border-width: $triangle-height 30vw 0 0;
+    }
+
+    .t2 {
+        border-width: $triangle-height 32.5vw 0 0;
+    }
+
+    .t3 {
+        border-width: $triangle-height 35vw 0 0;
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    .root {
+        height: auto;
+        position: initial;
+        display: block;
+    }
+
+    header {
+        background: $primary;
+        padding: 30px;
+    }
+
+    .logoLink {
+        margin: 0;
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    .triangle {
+        display: none;
+    }
+
+    .footer {
+        display: none;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    header {
+        padding: 15px;
+    }
+}

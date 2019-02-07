@@ -1,7 +1,7 @@
 import React from 'react';
 import 'systematize';
 import { Switch, Route } from 'react-router-dom';
-import Sidebar from '../Sidebar';
+import MenuBar from '../MenuBar';
 import Home from '../Home';
 import Projects from '../Projects';
 import Contact from '../Contact';
@@ -10,7 +10,7 @@ import './App.scss';
 
 const App = () => (
     <div className="container">
-        <Sidebar />
+        <MenuBar />
         <article>
             <Switch>
                 <Route path="/" exact component={Home} />

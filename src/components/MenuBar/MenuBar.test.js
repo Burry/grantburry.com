@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { MemoryRouter } from 'react-router-dom';
-import Sidebar from './Sidebar';
+import MenuBar from './MenuBar';
 
 const Component = (
     <MemoryRouter>
-        <Sidebar />
+        <MenuBar />
     </MemoryRouter>
 );
 

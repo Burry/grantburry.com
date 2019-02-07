@@ -2,6 +2,8 @@
     <img src="https://github.com/Burry/grantburry.com/blob/master/public/android-chrome-512x512.png?raw=true" width="170px" alt="Grant Burry" />
 </h1>
 
+[![Build Status](https://travis-ci.com/Burry/grantburry.com.svg?token=pt6picbdu8zEpV9ixSLN&branch=master)](https://travis-ci.com/Burry/grantburry.com)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

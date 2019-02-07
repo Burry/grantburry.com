@@ -1,0 +1,27 @@
+@import '../../../../variables';
+@import '../../../../mixins';
+
+.root {
+    display: block;
+    color: $text-color;
+
+    @include hover-focus {
+        color: $teritary;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        color: $primary;
+    }
+}
+
+.active {
+    color: $primary;
+
+    @include hover-focus-active {
+        color: $primary;
+    }
+}
