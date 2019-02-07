@@ -1,6 +1,18 @@
 @import '../../../variables';
 @import '../../../mixins';
 
+.logoLink {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 100px;
+    line-height: 0;
+    z-index: 5;
+}
+
+.logo {
+    height: 50px;
+}
+
 nav {
     z-index: 4;
 }
@@ -69,7 +81,6 @@ nav {
 .btnCollapse {
     width: 30px;
     height: 24px;
-    float: right;
     display: none;
     cursor: pointer;
     transition-property: opacity, filter;
@@ -122,14 +133,28 @@ nav {
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
+    .logoLink {
+        margin: 0;
+    }
+
+    .logo {
+        height: 30px;
+    }
+
     nav {
         background: $body-bg;
         border-radius: 0.25rem;
         padding: 0.5rem;
     }
 
+    .navBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .collapseContainer {
-        padding-top: 23px;
+        padding-top: 30px;
     }
 
     .navFooter {
@@ -144,6 +169,6 @@ nav {
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
     .collapseContainer {
-        padding-top: 8px;
+        padding-top: 15px;
     }
 }

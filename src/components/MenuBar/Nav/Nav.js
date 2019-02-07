@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
+import { Link } from 'react-router-dom';
 import { Collapse } from 'react-collapse';
 import { faHome, faTools, faMailbox } from '@fortawesome/pro-solid-svg-icons';
+import Logo from './Logo';
 import NavLink from './NavLink';
 import styles from './Nav.module.scss';
 
@@ -24,18 +26,23 @@ const Nav = () => {
     });
     return (
         <>
-            <button
-                type="button"
-                className={classnames(
-                    styles.btnCollapse,
-                    isOpen && styles.active
-                )}
-                onClick={() => setNavOpen(!isOpen)}
-            >
-                <span className={styles.btnCollapseBox}>
-                    <span className={styles.btnCollapseInner} />
-                </span>
-            </button>
+            <div className={styles.navBar}>
+                <Link to="/" aria-label="Home" className={styles.logoLink}>
+                    <Logo fill="#FFF" className={styles.logo} />
+                </Link>
+                <button
+                    type="button"
+                    className={classnames(
+                        styles.btnCollapse,
+                        isOpen && styles.active
+                    )}
+                    onClick={() => setNavOpen(!isOpen)}
+                >
+                    <span className={styles.btnCollapseBox}>
+                        <span className={styles.btnCollapseInner} />
+                    </span>
+                </button>
+            </div>
             <Collapse
                 isOpened={isOpen}
                 theme={{ content: styles.collapseContainer }}
