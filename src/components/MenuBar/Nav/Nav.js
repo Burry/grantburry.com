@@ -5,7 +5,7 @@ import { faHome, faTools, faMailbox } from '@fortawesome/pro-solid-svg-icons';
 import NavLink from './NavLink';
 import styles from './Nav.module.scss';
 
-const getWidth = () =>
+const browserWidth = () =>
     Math.max(
         document.body.scrollWidth,
         document.documentElement.scrollWidth,
@@ -15,7 +15,7 @@ const getWidth = () =>
     );
 
 const Nav = () => {
-    const isDesktop = () => Boolean(getWidth() > 767.98);
+    const isDesktop = () => Boolean(browserWidth() > 767.98);
     const [isOpen, setNavOpen] = useState(isDesktop());
     const setNavByWidth = () => setNavOpen(isDesktop());
     useEffect(() => {

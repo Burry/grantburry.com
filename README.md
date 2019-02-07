@@ -1,8 +1,8 @@
 <h1 align="center">
     <img src="https://github.com/Burry/grantburry.com/blob/master/public/android-chrome-512x512.png?raw=true" width="170px" alt="Grant Burry" />
+    <br />
+    <a href="https://travis-ci.com/Burry/grantburry.com" target="_blank" rel="noopener noreferrer"><img src="https://travis-ci.com/Burry/grantburry.com.svg?token=pt6picbdu8zEpV9ixSLN&branch=master" width="170px" alt="Grant Burry" /></a>
 </h1>
-
-[![Build Status](https://travis-ci.com/Burry/grantburry.com.svg?token=pt6picbdu8zEpV9ixSLN&branch=master)](https://travis-ci.com/Burry/grantburry.com)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
