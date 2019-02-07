@@ -76,3 +76,40 @@
         }
     }
 }
+
+@mixin triangle($color, $viewport-width-units, $duration) {
+    border-width: $triangle-height #{$viewport-width-units}vw 0 0;
+    border-color: $color transparent transparent transparent;
+    animation: slideTriangle#{$viewport-width-units}vw #{$duration}s cubic-bezier(0.165, 0.84, 0.44, 1) 1;
+}
+
+@mixin media-triangle-fragment($width) {
+    border-width: $triangle-height #{$width}vw 0 0;
+    animation-name: slideTriangle#{$width}vw;
+}
+
+@mixin media-triangles($t1-width, $t2-width, $t3-width) {
+    .t1 {
+        @include media-triangle-fragment($t1-width);
+    }
+
+    .t2 {
+        @include media-triangle-fragment($t2-width);
+    }
+
+    .t3 {
+        @include media-triangle-fragment($t3-width);
+    }
+}
+
+@mixin slideTriangleKeyframes($viewport-width-units) {
+    @keyframes slideTriangle#{$viewport-width-units}vw {
+        from {
+            border-width: $triangle-height #{$viewport-width-units / 1.5}vw 0 0;
+        }
+
+        to {
+            border-width: $triangle-height #{$viewport-width-units}vw 0 0;
+        }
+    }
+}

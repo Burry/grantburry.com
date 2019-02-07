@@ -1,6 +1,6 @@
 <h1 align="center">
     <a href="https://grantburry.com" target="_blank">
-        <img src="https://github.com/Burry/grantburry.com/blob/master/public/android-chrome-512x512.png?raw=true" width="170px" style="display: block;" alt="Grant Burry" />
+        <img src="https://github.com/Burry/grantburry.com/blob/master/public/android-chrome-512x512.png?raw=true" width="170px" alt="Grant Burry" />
         <br />
         <span style="font-size: 2em;color: #F00">grantburry.com</span>
     </a>
