@@ -1,0 +1,56 @@
+@import '../../variables';
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    background: $bg-color;
+    color: $text-color;
+}
+
+::-moz-selection {
+    background: $primary;
+    color: #fff;
+}
+
+::selection {
+    background: $primary;
+    color: #fff;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid: auto-flow / 30vw auto;
+    column-gap: 1rem;
+}
+
+article {
+    grid-column: 2;
+    padding-top: 28px;
+    margin-bottom: 5rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.lead {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+pre {
+    width: min-content;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    background: #f5f5f5;
+    white-space: pre-wrap;
+}
