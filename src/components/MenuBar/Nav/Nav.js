@@ -30,7 +30,12 @@ const Nav = () => {
     return (
         <>
             <div className={styles.navBar}>
-                <Link to="/" aria-label="Home" className={styles.logoLink}>
+                <Link
+                    to="/"
+                    aria-label="Home"
+                    className={styles.logoLink}
+                    {...closeNavProp}
+                >
                     <Logo fill="#FFF" className={styles.logo} />
                 </Link>
                 <button
