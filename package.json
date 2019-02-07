@@ -14,7 +14,7 @@
         "test": "react-scripts test --coverage",
         "build": "react-scripts build",
         "analyze": "react-scripts build --stats && webpack-bundle-analyzer build/bundle-stats.json -m static -r build/bundle-stats.html -O",
-        "predeploy": "react-scripts build && cat CNAME > ./build/CNAME",
+        "predeploy": "react-scripts build && echo grantburry.com > ./build/CNAME",
         "deploy": "gh-pages -d build",
         "eject": "react-scripts eject",
         "precommit": "lint-staged"
