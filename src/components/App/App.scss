@@ -10,6 +10,10 @@ body,
     color: $text-color;
 }
 
+body {
+    height: 100%;
+}
+
 ::-moz-selection {
     background: $primary;
     color: #fff;
