@@ -21,7 +21,7 @@ const Nav = () => {
     const [isOpen, setNavOpen] = useState(isDesktop());
     const setNavByWidth = () => setNavOpen(isDesktop());
     const closeNavProp = {
-        onClick: () => (isDesktop ? null : setNavOpen(false))
+        onClick: () => (isDesktop() ? null : setNavOpen(false))
     };
     useEffect(() => {
         window.addEventListener('resize', setNavByWidth);
