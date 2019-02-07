@@ -1,8 +1,10 @@
 <h1 align="center">
     <a href="https://grantburry.com" target="_blank">
         <img src="https://github.com/Burry/grantburry.com/blob/master/public/android-chrome-512x512.png?raw=true" width="170px" alt="Grant Burry" />
+        <br />
         <span style="font-size: 2em;color: #F00">grantburry.com</span>
     </a>
+    <br />
     <a href="https://travis-ci.com/Burry/grantburry.com" target="_blank">
         <img src="https://travis-ci.com/Burry/grantburry.com.svg?token=pt6picbdu8zEpV9ixSLN&branch=master" alt="Build Status" />
     </a>
