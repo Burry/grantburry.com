@@ -1,7 +1,12 @@
 <h1 align="center">
     <img src="https://github.com/Burry/grantburry.com/blob/master/public/android-chrome-512x512.png?raw=true" width="170px" alt="Grant Burry" />
     <br />
-    <a href="https://travis-ci.com/Burry/grantburry.com" target="_blank" rel="noopener noreferrer"><img src="https://travis-ci.com/Burry/grantburry.com.svg?token=pt6picbdu8zEpV9ixSLN&branch=master" width="170px" alt="Grant Burry" /></a>
+    <a href="https://grantburry.com" target="_blank">
+        <span style="font-size: 2em;">grantburry.com</span>
+    </a>
+    <a href="https://travis-ci.com/Burry/grantburry.com" target="_blank">
+        <img src="https://travis-ci.com/Burry/grantburry.com.svg?token=pt6picbdu8zEpV9ixSLN&branch=master" alt="Build Status" />
+    </a>
 </h1>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
