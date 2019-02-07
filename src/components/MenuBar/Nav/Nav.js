@@ -20,6 +20,7 @@ const Nav = () => {
     const isDesktop = () => Boolean(browserWidth() > 767.98);
     const [isOpen, setNavOpen] = useState(isDesktop());
     const setNavByWidth = () => setNavOpen(isDesktop());
+    const closeNavProp = { onClick: () => setNavOpen(false) };
     useEffect(() => {
         window.addEventListener('resize', setNavByWidth);
         return () => window.removeEventListener('resize', setNavByWidth);
@@ -48,18 +49,26 @@ const Nav = () => {
                 theme={{ content: styles.collapseContainer }}
             >
                 <nav>
-                    <NavLink to="/" exact label="Home" icon={faHome} />
+                    <NavLink
+                        to="/"
+                        exact
+                        label="Home"
+                        icon={faHome}
+                        {...closeNavProp}
+                    />
                     <NavLink
                         to="/projects"
                         exact
                         label="Projects"
                         icon={faTools}
+                        {...closeNavProp}
                     />
                     <NavLink
                         to="/contact"
                         exact
                         label="Contact"
                         icon={faMailbox}
+                        {...closeNavProp}
                     />
                 </nav>
                 <footer className={styles.navFooter}>
