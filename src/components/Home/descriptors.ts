@@ -77,7 +77,7 @@ const descriptors: ListData = [
             },
         },
         {
-            text: 'GameStop stockholder',
+            text: 'GameStop shareholder',
             icon: {
                 type: faChartLineDown,
                 colors: {
