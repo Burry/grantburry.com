@@ -115,8 +115,6 @@ export const FlexList = styled.ul`
     padding: 0;
 
     @media screen and (max-width: 760px) {
-        max-width: calc(100% - 2rem);
-
         &:first-child {
             margin-top: 1rem;
             margin-bottom: 0;
