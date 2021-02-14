@@ -127,7 +127,7 @@ const Home: React.FC = () => {
                         </p>
                         <p>
                             In my free time I doom-scroll clickbait headlines
-                            and stretegize how to get an extra 0.25% off my next
+                            and strategize how to get an extra 0.25% off my next
                             Wi-Fi connected pair of socks.
                         </p>
                     </FAQ>
