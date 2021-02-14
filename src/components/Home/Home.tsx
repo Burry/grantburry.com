@@ -119,7 +119,7 @@ const Home: React.FC = () => {
                 <Section gradient>
                     <h2>FAQ</h2>
                     <FAQ>
-                        <h3>Who is this guy?</h3>
+                        <h3>Who are you?</h3>
                         <p>
                             I make things with computers, and sometimes they
                             work. I&apos;m a nerd from Seattle who writes lots
@@ -128,7 +128,7 @@ const Home: React.FC = () => {
                         <p>
                             In my free time I doom-scroll clickbait headlines
                             and strategize how to get an extra 0.25% off my next
-                            Wi-Fi connected pair of socks.
+                            Wi-Fi connected toothbrush.
                         </p>
                     </FAQ>
                     <FAQ>
@@ -176,7 +176,7 @@ const Home: React.FC = () => {
                     </FAQ>
                 </Section>
                 <Section>
-                    <h2>Do Stuff</h2>
+                    <h2>Hyperlinks</h2>
                     <Row>
                         {actions.map((column, idx) => (
                             <FlexList key={idx}>
