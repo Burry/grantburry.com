@@ -41,10 +41,11 @@ const getSsn = () => {
 };
 
 const ExternalLink: React.FC<React.HTMLProps<HTMLAnchorElement>> = ({
+    target,
     children,
     ...props
 }) => (
-    <a target="_blank" rel="noopener noreferrer" {...props}>
+    <a target={target || '_blank'} rel="noopener noreferrer" {...props}>
         {children}
     </a>
 );

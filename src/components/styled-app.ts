@@ -59,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
     a {
         color: var(--white);
         text-decoration: none;
-        background: rgba(255, 255, 255, 0.15) none repeat scroll 0 0;
+        background: rgba(255, 255, 255, 0.25) none repeat scroll 0 0;
         box-decoration-break: clone;
         padding: 0 0.25rem;
         transform: skewX(var(--diagonal-angle));
@@ -67,17 +67,17 @@ const GlobalStyle = createGlobalStyle`
         display: inline-block;
 
         &:focus {
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.15);
         }
 
         @media (hover) {
             &:hover {
-                background-color: rgba(255, 255, 255, 0.3);
+                background-color: rgba(255, 255, 255, 0.15);
             }
         }
 
         &:active {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(0, 0, 0, 0.15);
         }
 
         &:after {

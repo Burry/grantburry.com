@@ -73,16 +73,19 @@ export const ActionListItem = styled.li<ActionListItemProps>`
 
         &:focus {
             opacity: 0.8;
+            background-color: ${({ background }) => background};
         }
 
         @media (hover) {
             &:hover {
                 opacity: 0.8;
+                background-color: ${({ background }) => background};
             }
         }
 
         &:active {
             opacity: 0.7;
+            background-color: ${({ background }) => background};
         }
 
         &:after {
