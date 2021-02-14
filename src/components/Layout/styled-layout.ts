@@ -104,8 +104,8 @@ export const Row = styled.div`
 `;
 
 export const FlexList = styled.ul`
-    margin: 1rem;
-    max-width: calc(50% - 4rem);
+    margin: 1rem 0;
+    width: 100%;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -115,14 +115,16 @@ export const FlexList = styled.ul`
     padding: 0;
 
     @media screen and (max-width: 760px) {
-        max-width: 100%;
+        max-width: calc(100% - 2rem);
 
         &:first-child {
-            margin: 1rem 1rem 0 1rem;
+            margin-top: 1rem;
+            margin-bottom: 0;
         }
 
         &:last-child {
-            margin: 0 1rem 1rem 1rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
         }
     }
 `;
@@ -133,7 +135,7 @@ export const StyledButton = styled.button`
     border: 0;
     color: var(--white);
     font-size: 2rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.5rem 0.75rem 0.5rem;
     min-width: 200px;
     border-radius: 0;
     display: flex;

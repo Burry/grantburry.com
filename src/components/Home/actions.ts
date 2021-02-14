@@ -44,7 +44,7 @@ const actions: Actions = [
         {
             text: 'Cancel me',
             background: '#1DA1F2',
-            link: 'https://twitter.com/intent/tweet?text=grantburry.com',
+            link: 'https://twitter.com/grantburry',
             icon: {
                 type: faTwitterSquare,
                 colors: {
@@ -56,7 +56,7 @@ const actions: Actions = [
             text: 'Fork me',
             background: '#fff',
             color: '#212529',
-            link: 'https://github.com/Burry',
+            link: 'https://github.com/Burry/grantburry.com',
             icon: {
                 type: faGithubSquare,
 

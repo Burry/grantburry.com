@@ -137,7 +137,7 @@ export const PGP = styled.pre<PGPProps>`
     margin: 0 auto;
     white-space: pre-wrap;
     font-size: 12px;
-    line-height: 14px;
+    line-height: 12px;
     overflow-x: scroll;
     overflow-y: hidden;
     transition: height 1s ease;
