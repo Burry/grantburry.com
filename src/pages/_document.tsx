@@ -1,4 +1,10 @@
-import NextDocument, { DocumentContext } from 'next/document';
+import NextDocument, {
+    DocumentContext,
+    Html,
+    Head,
+    Main,
+    NextScript,
+} from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 class Document extends NextDocument {
@@ -26,6 +32,18 @@ class Document extends NextDocument {
         } finally {
             sheet.seal();
         }
+    }
+
+    render(): JSX.Element {
+        return (
+            <Html lang="en-us">
+                <Head />
+                <body>
+                    <Main />
+                    <NextScript />
+                </body>
+            </Html>
+        );
     }
 }
 
