@@ -174,14 +174,6 @@ const Home: React.FC = () => {
                             reference.
                         </p>
                     </FAQ>
-                    <FAQ>
-                        <h3>How do I stop paying Federal taxes?</h3>
-                        <p>
-                            <ExternalLink href="https://nomadcapitalist.com/second-passport/panama/">
-                                This looks promising
-                            </ExternalLink>
-                        </p>
-                    </FAQ>
                 </Section>
                 <Section>
                     <h2>Do Stuff</h2>

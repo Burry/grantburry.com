@@ -95,13 +95,13 @@ const actions: Actions = [
         },
         {
             text: 'Arrest me',
-            background: '#09f',
+            background: '#f00',
             link: 'https://tips.fbi.gov',
             icon: {
                 type: faSirenOn,
                 colors: {
                     primary: '#fff',
-                    secondary: '#f00',
+                    secondary: '#0cf',
                 },
             },
         },
