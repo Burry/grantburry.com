@@ -8,10 +8,6 @@ export const LogoContainer = styled.div`
     justify-content: center;
     margin: 3rem auto;
 
-    @media screen and (max-width: 760px) {
-        margin: 2rem auto;
-    }
-
     @media screen and (max-width: 320px) {
         margin: 0 auto;
     }
