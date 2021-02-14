@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { lighten, darken } from 'polished';
 
 // Logo
 export const LogoContainer = styled.div`
@@ -48,16 +49,39 @@ export const Icon = styled(FontAwesomeIcon)<CustomIconProps>`
 `;
 
 // Actions
-export const ActionListItem = styled.li`
+type ActionListItemProps = {
+    background: string;
+    color: string;
+};
+
+export const ActionListItem = styled.li<ActionListItemProps>`
     width: 100%;
     display: flex;
     position: relative;
+    text-shadow: none !important;
 
     a {
-        padding: 0.75rem 1.5rem;
+        color: ${({ color }) => color};
+        background-color: ${({ background }) => background};
+        padding: 1.5rem 2rem;
         width: 100%;
         display: flex;
         align-items: center;
+
+        &:focus {
+            background-color: ${({ background }) => lighten(0.5, background)};
+        }
+
+        @media (hover) {
+            &:hover {
+                background-color: ${({ background }) =>
+                    lighten(0.5, background)};
+            }
+        }
+
+        &:active {
+            background-color: ${({ background }) => darken(0.3, background)};
+        }
 
         &:after {
             line-height: initial;
@@ -70,12 +94,12 @@ export const ActionListItem = styled.li`
     }
 
     @media screen and (min-width: 760px) {
-        &:nth-child(2) {
-            left: -9px;
+        &:first-of-type {
+            left: 9px;
         }
 
-        &:last-child {
-            left: -18px;
+        &:last-of-type {
+            left: -9px;
         }
     }
 `;

@@ -187,16 +187,39 @@ const Home: React.FC = () => {
                     <Row>
                         {actions.map((column, idx) => (
                             <FlexList key={idx}>
-                                {column.map(({ icon, text, link, target }) => (
-                                    <ActionListItem key={text}>
-                                        <ExternalLink
-                                            href={link}
-                                            target={target}
+                                {column.map(
+                                    ({
+                                        icon,
+                                        background,
+                                        color,
+                                        text,
+                                        link,
+                                        target,
+                                    }) => (
+                                        <ActionListItem
+                                            key={text}
+                                            background={background}
+                                            color={color}
                                         >
-                                            <Line icon={icon}>{text}</Line>{' '}
-                                        </ExternalLink>
-                                    </ActionListItem>
-                                ))}
+                                            <ExternalLink
+                                                href={link}
+                                                target={target}
+                                            >
+                                                <IconContainer>
+                                                    <Icon
+                                                        icon={icon.type}
+                                                        colors={icon.colors}
+                                                        size="lg"
+                                                        fixedWidth
+                                                    />
+                                                </IconContainer>
+                                                <IconTextParagraph>
+                                                    {text}
+                                                </IconTextParagraph>
+                                            </ExternalLink>
+                                        </ActionListItem>
+                                    )
+                                )}
                             </FlexList>
                         ))}
                     </Row>

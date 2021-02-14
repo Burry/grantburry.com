@@ -8,38 +8,59 @@ import {
     faTwitterSquare,
     faGithubSquare,
 } from '@fortawesome/free-brands-svg-icons';
-import { ListData } from './listData';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-const actions: ListData = [
+type Actions = Array<
+    Array<{
+        text: string;
+        background?: string;
+        color?: string;
+        link?: string;
+        target?: string;
+        icon: {
+            type: IconProp;
+            colors: {
+                primary: string;
+                secondary?: string;
+            };
+        };
+    }>
+>;
+
+const actions: Actions = [
     [
         {
             text: 'Hire me',
+            background: '#0a66c2',
             link: 'https://www.linkedin.com/in/burry/',
             icon: {
                 type: faLinkedin,
                 colors: {
-                    primary: '#0a66c2',
+                    primary: '#fff',
                 },
             },
         },
         {
             text: 'Cancel me',
+            background: '#1DA1F2',
             link: 'https://twitter.com/intent/tweet?text=grantburry.com',
             icon: {
                 type: faTwitterSquare,
                 colors: {
-                    primary: '#1DA1F2',
+                    primary: '#fff',
                 },
             },
         },
         {
             text: 'Fork me',
+            background: '#fff',
+            color: '#212529',
             link: 'https://github.com/Burry',
             icon: {
                 type: faGithubSquare,
+
                 colors: {
-                    primary: 'white',
-                    secondary: 'white',
+                    primary: '#212529',
                 },
             },
         },
@@ -47,29 +68,33 @@ const actions: ListData = [
     [
         {
             text: 'Spam me',
+            background: '#eee',
+            color: '#212529',
             link: 'mailto:grant@burry.me?subject=Hello!',
             target: '_self',
             icon: {
                 type: faEnvelopeSquare,
                 colors: {
-                    primary: '#eee',
-                    secondary: 'rgba(0, 0, 0, 0.5)',
+                    primary: '#fff',
+                    secondary: '#09f',
                 },
             },
         },
         {
             text: 'Bribe me',
             link: 'https://cash.app/$grant',
+            background: 'limegreen',
             icon: {
                 type: faUsdSquare,
                 colors: {
-                    primary: 'white',
-                    secondary: 'limegreen',
+                    primary: 'limegreen',
+                    secondary: '#fff',
                 },
             },
         },
         {
             text: 'Arrest me',
+            background: '#09f',
             link: 'https://tips.fbi.gov',
             icon: {
                 type: faSirenOn,
