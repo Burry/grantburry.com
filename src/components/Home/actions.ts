@@ -9,22 +9,23 @@ import {
     faGithubSquare,
 } from '@fortawesome/free-brands-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { ActionListItemProps } from './styled-home';
 
 type Actions = Array<
-    Array<{
-        text: string;
-        background?: string;
-        color?: string;
-        link?: string;
-        target?: string;
-        icon: {
-            type: IconProp;
-            colors: {
-                primary: string;
-                secondary?: string;
+    Array<
+        {
+            text: string;
+            link?: string;
+            target?: string;
+            icon: {
+                type: IconProp;
+                colors: {
+                    primary: string;
+                    secondary?: string;
+                };
             };
-        };
-    }>
+        } & ActionListItemProps
+    >
 >;
 
 const actions: Actions = [

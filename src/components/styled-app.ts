@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
             font-size: 24px;
         }
 
-        @media screen and (max-width: 320px) {
+        @media screen and (max-width: 350px) {
             font-size: 18px;
         }
     }

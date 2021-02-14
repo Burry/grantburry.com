@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { lighten, darken } from 'polished';
 
 // Logo
 export const LogoContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 3rem auto;
+    margin: 5rem auto;
 
-    @media screen and (max-width: 320px) {
-        margin: 0 auto;
+    @media screen and (max-width: 760px) {
+        margin: 3.5rem auto;
+    }
+
+    @media screen and (max-width: 350px) {
+        margin: 1rem auto;
     }
 `;
 
@@ -49,9 +52,9 @@ export const Icon = styled(FontAwesomeIcon)<CustomIconProps>`
 `;
 
 // Actions
-type ActionListItemProps = {
+export type ActionListItemProps = {
     background: string;
-    color: string;
+    color?: string;
 };
 
 export const ActionListItem = styled.li<ActionListItemProps>`
@@ -61,31 +64,34 @@ export const ActionListItem = styled.li<ActionListItemProps>`
     text-shadow: none !important;
 
     a {
-        color: ${({ color }) => color};
+        color: ${({ color }) => color || '#fff'};
         background-color: ${({ background }) => background};
-        padding: 1.5rem 2rem;
+        padding: 1.5rem;
         width: 100%;
         display: flex;
         align-items: center;
 
         &:focus {
-            background-color: ${({ background }) => lighten(0.5, background)};
+            opacity: 0.8;
         }
 
         @media (hover) {
             &:hover {
-                background-color: ${({ background }) =>
-                    lighten(0.5, background)};
+                opacity: 0.8;
             }
         }
 
         &:active {
-            background-color: ${({ background }) => darken(0.3, background)};
+            opacity: 0.7;
         }
 
         &:after {
             line-height: initial;
             top: -0.125rem;
+        }
+
+        @media screen and (min-width: 760px) and (max-width: 760px) {
+            padding: 1.5rem 0;
         }
     }
 

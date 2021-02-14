@@ -79,11 +79,11 @@ export const StyledContent = styled.div`
     text-align: center;
 
     @media screen and (max-width: 760px) {
-        padding: 3rem;
+        padding: 4rem 2rem;
     }
 
-    @media screen and (max-width: 320px) {
-        padding: 3rem 1rem;
+    @media screen and (max-width: 350px) {
+        padding: 3.5rem 1rem;
     }
 `;
 
