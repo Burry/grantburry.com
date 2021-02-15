@@ -8,9 +8,9 @@ import {
     faChartLineDown,
     faRunning,
     faSoup,
-    faFlagUsa,
+    faFlagUsa
 } from '@fortawesome/pro-duotone-svg-icons';
-import { ListData } from './listData';
+import { ListData } from '../../../types/listData';
 
 const descriptors: ListData = [
     [
@@ -20,9 +20,9 @@ const descriptors: ListData = [
                 type: faFire,
                 colors: {
                     primary: 'var(--tertiary-color)',
-                    secondary: 'var(--primary-color)',
-                },
-            },
+                    secondary: 'var(--primary-color)'
+                }
+            }
         },
         {
             text: 'Spaghetti coder',
@@ -30,9 +30,9 @@ const descriptors: ListData = [
                 type: faPastafarianism,
                 colors: {
                     primary: '#fff',
-                    secondary: '#f90',
-                },
-            },
+                    secondary: '#f90'
+                }
+            }
         },
         {
             text: 'Middle school science fair winner',
@@ -40,9 +40,9 @@ const descriptors: ListData = [
                 type: faTrophy,
                 colors: {
                     primary: '#ffd700',
-                    secondary: '#daa520',
-                },
-            },
+                    secondary: '#daa520'
+                }
+            }
         },
         {
             text: 'Involuntary IT specialist',
@@ -50,9 +50,9 @@ const descriptors: ListData = [
                 type: faUserHeadset,
                 colors: {
                     primary: '#a0f',
-                    secondary: '#808080',
-                },
-            },
+                    secondary: '#808080'
+                }
+            }
         },
         {
             text: 'Proud cube-earther',
@@ -60,10 +60,10 @@ const descriptors: ListData = [
                 type: faCube,
                 colors: {
                     primary: '#00b7eb',
-                    secondary: '#00b7eb',
-                },
-            },
-        },
+                    secondary: '#00b7eb'
+                }
+            }
+        }
     ],
     [
         {
@@ -72,9 +72,9 @@ const descriptors: ListData = [
                 type: faSackDollar,
                 colors: {
                     primary: 'transparent',
-                    secondary: '#ffd700',
-                },
-            },
+                    secondary: '#ffd700'
+                }
+            }
         },
         {
             text: 'GameStop shareholder',
@@ -82,9 +82,9 @@ const descriptors: ListData = [
                 type: faChartLineDown,
                 colors: {
                     primary: '#f00',
-                    secondary: '#808080',
-                },
-            },
+                    secondary: '#808080'
+                }
+            }
         },
         {
             text: 'Two-time marathon spectator',
@@ -92,9 +92,9 @@ const descriptors: ListData = [
                 type: faRunning,
                 colors: {
                     primary: '#0f0',
-                    secondary: '#0f0',
-                },
-            },
+                    secondary: '#0f0'
+                }
+            }
         },
         {
             text: 'Skilled ramen microwaver',
@@ -102,9 +102,9 @@ const descriptors: ListData = [
                 type: faSoup,
                 colors: {
                     primary: '#800020',
-                    secondary: '#808080',
-                },
-            },
+                    secondary: '#808080'
+                }
+            }
         },
         {
             text: 'Featured on 10+ intelligence agency watchlists',
@@ -112,11 +112,11 @@ const descriptors: ListData = [
                 type: faFlagUsa,
                 colors: {
                     primary: '#09f',
-                    secondary: '#f22',
-                },
-            },
-        },
-    ],
+                    secondary: '#f22'
+                }
+            }
+        }
+    ]
 ];
 
 export default descriptors;

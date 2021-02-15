@@ -14,11 +14,16 @@
         "build": "next build",
         "start": "next start",
         "type-check": "tsc --pretty --noEmit",
-        "format": "prettier --write .",
-        "lint:js": "eslint . --ext ts --ext tsx --ext js  --ext jsx",
-        "lint:css": "stylelint './src/**/*.{css,scss,js,jsx,ts,tsx}'",
-        "test": "jest",
-        "test-all": "yarn lint && yarn type-check && yarn test",
+        "type-check:fix": "npm-run-all 'type-check {@}'",
+        "lint:format": "prettier .",
+        "lint:format:fix": "prettier --write .",
+        "lint:js": "eslint . --ext ts --ext tsx --ext js --ext jsx --ignore-path .gitignore --ignore-pattern public",
+        "lint:js:fix": "npm-run-all 'lint:js --fix {@}'",
+        "lint:css": "stylelint './src/**/*.{css,scss,sass,js,jsx,ts,tsx}'",
+        "lint": "npm-run-all type-check lint:js lint:css lint:format",
+        "lint:fix": "npm-run-all type-check lint:js:fix lint:css lint:format:fix",
+        "test": "jest --coverage",
+        "test:all": "npm-run-all lint test",
         "analyze": "cross-env ANALYZE=true yarn build"
     },
     "husky": {
@@ -28,9 +33,16 @@
         }
     },
     "lint-staged": {
-        "*.@(ts|tsx)": [
-            "yarn lint",
-            "yarn format"
+        "*.@(ts|tsx|js|jsx)": [
+            "yarn type-check:fix",
+            "eslint --fix --ignore-path .gitignore --ignore-pattern public",
+            "jest --coverage --findRelatedTests",
+            "prettier --write",
+            "git add"
+        ],
+        "*.@(css|scss|sass)": [
+            "prettier --write",
+            "git add"
         ]
     },
     "babel": {
@@ -144,7 +156,10 @@
     "prettier": {
         "semi": true,
         "singleQuote": true,
-        "tabWidth": 4
+        "tabWidth": 4,
+        "trailingComma": "none",
+        "jsxBracketSameLine": false,
+        "arrowParens": "avoid"
     },
     "jest": {
         "roots": [
@@ -207,15 +222,17 @@
         "eslint-config-prettier": "^7.2.0",
         "eslint-plugin-react": "^7.22.0",
         "husky": "^5.0.9",
-        "identity-obj-proxy": "^3.0.0",
         "jest": "^26.6.3",
         "jest-watch-typeahead": "^0.6.1",
         "lint-staged": "^10.5.4",
         "npm-run-all": "^4.1.5",
         "prettier": "^2.2.1",
         "stylelint": "^13.10.0",
+        "stylelint-config-standard": "^20.0.0",
         "stylelint-config-styled-components": "^0.1.1",
+        "stylelint-order": "^4.1.0",
         "stylelint-processor-styled-components": "^1.10.0",
+        "stylelint-scss": "^3.19.0",
         "typescript": "^4.1.5",
         "webpack": "^5.21.2"
     }
