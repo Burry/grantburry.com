@@ -3,7 +3,7 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import {
     faEyeSlash,
     faEye,
-    faQuestionSquare,
+    faQuestionSquare
 } from '@fortawesome/pro-duotone-svg-icons';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { faClipboard, faCheck } from '@fortawesome/pro-duotone-svg-icons';
@@ -15,7 +15,7 @@ import {
     CustomIconProps,
     FAQ,
     ActionListItem,
-    PGP,
+    PGP
 } from './styled-home';
 import {
     Header,
@@ -26,11 +26,11 @@ import {
     Button,
     StyledButtonGroup,
     IconContainer,
-    IconTextParagraph,
+    IconTextParagraph
 } from '../Layout';
 import descriptors from './descriptors';
 import actions from './actions';
-import pgp from '../../pgp.key';
+import pgp from './pgp.key';
 
 const getSsn = () => {
     let ssn =
@@ -69,8 +69,8 @@ const white = 'var(--white)';
 Line.defaultProps = {
     icon: {
         type: faQuestionSquare,
-        colors: { primary: white, secondary: white },
-    },
+        colors: { primary: white, secondary: white }
+    }
 };
 
 let copyTimeout: number;
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
         }, 3000);
     };
 
-    const handleTogglePgp = () => setShowPgp((prev) => !prev);
+    const handleTogglePgp = () => setShowPgp(prev => !prev);
 
     useEffect(() => {
         setSsn(getSsn());
@@ -187,7 +187,7 @@ const Home: React.FC = () => {
                                         color,
                                         text,
                                         link,
-                                        target,
+                                        target
                                     }) => (
                                         <ActionListItem
                                             key={text}

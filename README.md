@@ -1,4 +1,10 @@
-# [![Grant Burry](public/open-graph.png)](https://grantburry.com)
+<h1 align="center">
+    <a href="https://grantburry.com" target="_blank">
+        <img src="https://github.com/Burry/grantburry.com/blob/master/public/open-graph.png?raw=true" alt="Grant Burry" />
+        <br />
+        <span style="font-size: 2em;color: #F00">grantburry.com</span>
+    </a>
+</h1>
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -13,6 +19,10 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. The page auto-updates as you edit files.
+
+### Font Awesome
+
+This project uses private NPM modules from [Font Awesome 5 Pro](https://fontawesome.com/pro). You will need to set `$FONTAWESOME_NPM_AUTH_TOKEN` to a valid token in your environment variables or replace it in [`.npmrc`](.npmrc) in order to install the Font Awesome packages. [See documentation](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
 
 ## Learn More
 

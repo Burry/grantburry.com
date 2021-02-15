@@ -1,5 +1,6 @@
 {
     "name": "grantburry.com",
+    "description": "I make things with computers, and sometimes they work.",
     "version": "2.0.0",
     "private": true,
     "license": "MIT",
@@ -28,8 +29,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged",
-            "pre-push": "yarn run type-check"
+            "pre-commit": "lint-staged"
         }
     },
     "lint-staged": {
