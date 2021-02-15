@@ -25,7 +25,7 @@ const descriptors: ListData = [
             }
         },
         {
-            text: 'Spaghetti coder',
+            text: 'Spaghetti programmer',
             icon: {
                 type: faPastafarianism,
                 colors: {
