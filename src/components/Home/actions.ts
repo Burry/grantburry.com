@@ -31,7 +31,7 @@ type Actions = Array<
 const actions: Actions = [
     [
         {
-            text: 'Hire me',
+            text: 'Stalk me',
             background: '#0a66c2',
             link: 'https://www.linkedin.com/in/burry/',
             icon: {
