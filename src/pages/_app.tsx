@@ -35,7 +35,7 @@ class App extends NextApp {
                     {/* Microsoft */}
                     <meta
                         name="msapplication-config"
-                        content="/browserconfig..xml"
+                        content="/browserconfig.xml"
                     />
                     {/* Open Graph */}
                     <meta property="og:type" content="website" />
