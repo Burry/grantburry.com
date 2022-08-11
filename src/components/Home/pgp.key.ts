@@ -1,4 +1,4 @@
-export default `-----BEGIN PGP PUBLIC KEY BLOCK-----
+const PGP_KEY = `-----BEGIN PGP PUBLIC KEY BLOCK-----
 mQINBFxcBz8BEADKEF97wegVFr89xsl5vVm63OQnb/PVh9mWrfYbJV3Xblr0yakF
 9QY+jhsIb8bClaTWYBTci/aPRrLNtU159MZcfZ6xLbrzTvDSIgfwwVD/j2ViOFOv
 jDTsItWqXynDQlYXuxn2u4cL6MgX/ubjGCDRCnVMCWXvQb3Z6EzpdZTEcWEodUkn
@@ -130,4 +130,6 @@ Xuinj4BazDzfchmZnXmp9mnlEI8DJvSS/0lgYojr70QJoJU5J2F0oGKoXV36l3EY
 JDDASenQvstKyXzcGglBhBNHt1WpEcyRzmhi2pkj7m07+gxeaFPKxI4/fC30L9yV
 DNxm4o1NvbyoewuW7dZ/135L1x/IioTm5nQr5IZJ1ehtpPh5
 =V9+b
------END PGP PUBLIC KEY BLOCK-----`;
+-----END PGP PUBLIC KEY BLOCK-----`
+
+export default PGP_KEY

@@ -1,24 +1,14 @@
-"eslint.autoFixOnSave": true,
-"eslint.validate": [
-    {
-        "language": "javascript",
-        "autoFix": true
-    },
-    {
-        "language": "typescript",
-        "autoFix": true
-    },
-    {
-        "language": "javascriptreact",
-        "autoFix": true
-    },
-    {
-        "language": "typescriptreact",
-        "autoFix": true
-    }
-],
-"eslint.alwaysShowStatus": true,
-"editor.formatOnSave": true,
-"[typescript], [javascript]": {
-    "editor.formatOnSave": false
+{
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "eslint.alwaysShowStatus": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
 }
