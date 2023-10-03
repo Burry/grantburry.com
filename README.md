@@ -1,6 +1,6 @@
 <h1 align="center">
     <a href="https://grantburry.com" target="_blank">
-        <img src="https://github.com/Burry/grantburry.com/blob/master/public/open-graph.png?raw=true" alt="Grant Burry" />
+        <img src="https://github.com/Burry/grantburry.com/blob/main/public/open-graph.png?raw=true" alt="Grant Burry" />
         <br />
         <span style="font-size: 2em;color: #F00">grantburry.com</span>
     </a>
