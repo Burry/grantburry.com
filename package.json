@@ -27,6 +27,7 @@
     "analyze": "cross-env ANALYZE=true yarn build"
   },
   "dependencies": {
+    "@ducanh2912/next-pwa": "^9.7.1",
     "@fontsource/inter": "^4.5.12",
     "@fortawesome/fontawesome-pro": "^6.1.2",
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
@@ -35,8 +36,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@next/bundle-analyzer": "^12.2.4",
     "cross-env": "^7.0.3",
-    "next": "latest",
-    "next-pwa": "^5.5.5",
+    "next": "^13.5.4",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-copy-to-clipboard": "^5.1.0",

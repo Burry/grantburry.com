@@ -1,7 +1,10 @@
 import { DefaultTheme } from 'styled-components'
 
-const systemFontStack =
-  '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+import { Inter } from 'next/font/google'
+
+export const inter = Inter({ subsets: ['latin'] })
+
+const systemFontStack = `${inter.style.fontFamily} -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`
 
 export const theme: DefaultTheme = {
   colors: {
@@ -12,8 +15,8 @@ export const theme: DefaultTheme = {
     black: '#212529'
   },
   fontFamilies: {
-    base: `Inter, ${systemFontStack}`,
-    variable: `InterVariable, ${systemFontStack}`
+    base: systemFontStack,
+    variable: systemFontStack
   },
   angles: {
     diagonal: '-5deg'

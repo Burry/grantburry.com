@@ -1,25 +1,14 @@
-const withPWA = require('next-pwa')
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true'
+const withPWA = require('@ducanh2912/next-pwa').default({
+  dest: 'public'
 })
 
-const nextPlugins = [withBundleAnalyzer, withPWA]
-
-module.exports = () => {
-  /** @type {import('next').NextConfig} */
-  const nextConfig = {
-    reactStrictMode: true,
-    swcMinify: true,
-    compiler: {
-      styledComponents: true,
-      removeConsole: {
-        exclude: ['error']
-      }
-    },
-    pwa: {
-      dest: 'public'
+/** @type {import('next').NextConfig} */
+module.exports = withPWA({
+  reactStrictMode: true,
+  compiler: {
+    styledComponents: true,
+    removeConsole: {
+      exclude: ['error']
     }
   }
-
-  return nextPlugins.reduce((acc, plugin) => plugin(acc), { ...nextConfig })
-}
+})

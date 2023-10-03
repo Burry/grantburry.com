@@ -88,7 +88,7 @@ const Home = () => {
           <Logo src="/logo.svg" alt="GB" />
         </LogoContainer>
       </Header>
-      <main>
+      <div>
         <Section>
           <h1>Grant Burry</h1>
           <Row>
@@ -120,12 +120,16 @@ const Home = () => {
           <FAQ>
             <h3>What do you do?</h3>
             <p>
-              I&apos;m a solutions engineer at{' '}
+              I&apos;m the co-founder and CTO of{' '}
+              <ExternalLink href="https://app.me4u.ai/home/me4u_grant">
+                Me4U
+              </ExternalLink>
+              , using AI to build meaningful connections between creators and
+              their fans. I&apos;ve also worked in software roles at{' '}
               <ExternalLink href="https://fireblocks.com">
                 Fireblocks
               </ExternalLink>
-              , building the future of Web3 and digital asset infrastructure.
-              I&apos;ve also worked as a software engineer at{' '}
+              ,{' '}
               <ExternalLink href="https://www.bigspring.io">
                 BigSpring
               </ExternalLink>
@@ -193,7 +197,7 @@ const Home = () => {
           </StyledButtonGroup>
           <PGP show={showPgp}>{pgp}</PGP>
         </Section>
-      </main>
+      </div>
       <Footer />
     </>
   )

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
     html, body, #__next {
         height: 100%;
         width: 100%;
@@ -15,11 +15,6 @@ const GlobalStyle = createGlobalStyle`
         font-size: 32px;
         line-height: 1.5;
         text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
-
-        @supports (font-variation-settings: normal) {
-            font-family: ${({ theme }) => theme.fontFamilies.variable};
-           // font-variation-settings: "wght" 400;
-        }
 
         @media screen and (max-width: 760px) {
             font-size: 24px;
@@ -97,5 +92,3 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 900;
     }
 `
-
-export default GlobalStyle

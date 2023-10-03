@@ -37,7 +37,7 @@ const Error: React.FC<ErrorProps> = ({ statusCode }) => {
           {statusCode}
         </h1>
       </Header>
-      <main>
+      <div>
         <Head>{message}</Head>
         <Section>
           <h2>{message}</h2>
@@ -50,7 +50,7 @@ const Error: React.FC<ErrorProps> = ({ statusCode }) => {
             <a>Go Home</a>
           </Link>
         </Section>
-      </main>
+      </div>
       <Footer />
     </>
   )
