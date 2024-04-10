@@ -39,6 +39,4 @@ next-env.d.ts
 workbox-*.js
 sw.js
 sw-*.js
-workbox-*.js.map
-sw.js.map
-sw-*.js.map
+*.js.map
