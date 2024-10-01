@@ -120,7 +120,10 @@ const Home = () => {
           <FAQ>
             <h3>What do you do?</h3>
             <p>
-              I&apos;m the co-founder and CTO of{' '}
+              I&apos;m helping build software at{' '}
+              <ExternalLink href="https://evolve.com">Evolve</ExternalLink> to
+              make vacation rentals easy for everyone. I&apos;m the co-founder
+              of{' '}
               <ExternalLink href="https://app.me4u.ai/home/me4u_grant">
                 Me4U
               </ExternalLink>
