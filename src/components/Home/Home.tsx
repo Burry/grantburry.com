@@ -2,7 +2,14 @@ import type { ReactNode, HTMLProps } from 'react'
 import type { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestionSquare } from '@fortawesome/pro-duotone-svg-icons'
-import { Header, Footer, Section } from '../Layout'
+import {
+  Header,
+  Footer,
+  Section,
+  Heading,
+  linkClass,
+  linkAffordance
+} from '../Layout'
 import { PgpSection } from './PgpSection'
 import descriptors from './descriptors'
 import actions from './actions'
@@ -21,8 +28,18 @@ type ExternalLinkProps = HTMLProps<HTMLAnchorElement> & {
   children: ReactNode
 }
 
-const ExternalLink = ({ children, target, ...props }: ExternalLinkProps) => (
-  <a target={target || '_blank'} rel="noopener noreferrer" {...props}>
+const ExternalLink = ({
+  children,
+  target,
+  className,
+  ...props
+}: ExternalLinkProps) => (
+  <a
+    target={target || '_blank'}
+    rel="noopener noreferrer"
+    className={`${linkClass} ${className ?? ''}`}
+    {...props}
+  >
     {children}
   </a>
 )
@@ -67,7 +84,7 @@ const Home = () => (
     </Header>
     <main>
       <Section>
-        <h1>Grant Burry</h1>
+        <Heading level={1}>Grant Burry</Heading>
         <div className={rowClass}>
           {descriptors.map((column, idx) => (
             <ul key={idx} className={listClass}>
@@ -81,22 +98,22 @@ const Home = () => (
         </div>
       </Section>
       <Section gradient>
-        <h2>FAQ</h2>
+        <Heading level={2}>FAQ</Heading>
         <div className="mb-14 text-left last:m-0">
-          <h3>Who are you?</h3>
-          <p>
+          <Heading level={3}>Who are you?</Heading>
+          <p className="my-[1em]">
             I make things with computers, and sometimes they work. I&apos;m a
             nerd from Seattle who writes lots of JavaScript because I need
             instant gratification.
           </p>
-          <p>
+          <p className="my-[1em]">
             In my free time I let AI write code I don&apos;t understand and ship
             it straight to prod.
           </p>
         </div>
         <div className="mb-14 text-left last:m-0">
-          <h3>What do you do?</h3>
-          <p>
+          <Heading level={3}>What do you do?</Heading>
+          <p className="my-[1em]">
             I&apos;m helping build software at{' '}
             <ExternalLink href="https://evolve.com">Evolve</ExternalLink> to
             make vacation rentals easy for everyone. I&apos;m the co-founder of{' '}
@@ -119,7 +136,7 @@ const Home = () => (
             </ExternalLink>
             .
           </p>
-          <p>
+          <p className="my-[1em]">
             You can see my{' '}
             <ExternalLink href="https://www.linkedin.com/in/burry">
               LinkedIn
@@ -129,7 +146,7 @@ const Home = () => (
         </div>
       </Section>
       <Section>
-        <h2>Hyperlinks</h2>
+        <Heading level={2}>Hyperlinks</Heading>
         <div className={rowClass}>
           {actions.map((column, idx) => (
             <ul key={idx} className={listClass}>
@@ -146,10 +163,11 @@ const Home = () => (
                     key={text}
                     className="relative flex w-full [text-shadow:none] max-[760px]:mx-auto max-[760px]:my-2 min-[760px]:first-of-type:left-[9px] min-[760px]:last-of-type:left-[-9px]"
                   >
-                    <ExternalLink
+                    <a
                       href={link}
-                      target={target}
-                      className={`flex w-full items-center p-6 hover:opacity-80 focus:opacity-80 active:opacity-70 ${linkClassName}`}
+                      target={target || '_blank'}
+                      rel="noopener noreferrer"
+                      className={`${linkAffordance} flex w-full items-center p-6 hover:opacity-80 focus:opacity-80 active:opacity-70 ${linkClassName}`}
                     >
                       <div className="min-w-14">
                         <FontAwesomeIcon
@@ -160,7 +178,7 @@ const Home = () => (
                         />
                       </div>
                       <p className="m-0 ml-2">{text}</p>
-                    </ExternalLink>
+                    </a>
                   </li>
                 )
               )}

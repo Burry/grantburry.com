@@ -7,7 +7,7 @@ import {
   faClipboard,
   faCheck
 } from '@fortawesome/pro-duotone-svg-icons'
-import { Button } from '../Layout'
+import { Button, Heading } from '../Layout'
 import pgp from './pgp.key'
 
 let copyTimeout: number
@@ -29,8 +29,10 @@ export const PgpSection = () => {
 
   return (
     <>
-      <h2>Encrypt Stuff</h2>
-      <p>I have no real use for a PGP key, but they look cool.</p>
+      <Heading level={2}>Encrypt Stuff</Heading>
+      <p className="my-[1em]">
+        I have no real use for a PGP key, but they look cool.
+      </p>
       <div className="mb-4 flex items-center justify-center gap-x-8 max-[760px]:flex-col max-[760px]:gap-y-8">
         <Button
           icon={copiedPgp ? faCheck : faClipboard}

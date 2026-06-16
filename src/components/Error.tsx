@@ -4,7 +4,7 @@ import {
   faExclamationTriangle,
   faQuestionCircle
 } from '@fortawesome/pro-duotone-svg-icons'
-import { Header, Footer, Section } from './Layout'
+import { Header, Footer, Section, Heading, linkClass } from './Layout'
 
 export type ErrorProps = {
   statusCode?: number
@@ -32,25 +32,27 @@ const ErrorView = ({ statusCode }: ErrorProps) => {
   return (
     <>
       <Header>
-        <h1>
+        <Heading level={1}>
           <FontAwesomeIcon
             icon={statusCode === 404 ? faQuestionCircle : faExclamationTriangle}
           />
           <br />
           {statusCode}
-        </h1>
+        </Heading>
       </Header>
-      <div>
+      <main>
         <Section>
-          <h2>{message}</h2>
-          <p>
+          <Heading level={2}>{message}</Heading>
+          <p className="my-[1em]">
             {statusCode === 404
               ? "This page isn't a thing. You clicked on a bad link or fat-fingered your keyboard. Please consider the life choices that brought you here and then don't do them again."
               : 'Please try again'}
           </p>
-          <Link href="/">Go Home</Link>
+          <Link href="/" className={linkClass}>
+            Go Home
+          </Link>
         </Section>
-      </div>
+      </main>
       <Footer />
     </>
   )

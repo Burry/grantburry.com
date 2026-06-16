@@ -2,7 +2,8 @@
   "recommendations": [
     "oxc.oxc-vscode",
     "bradlc.vscode-tailwindcss",
-    "yoavbls.pretty-ts-errors"
+    "yoavbls.pretty-ts-errors",
+    "TypeScriptTeam.native-preview"
   ],
   "unwantedRecommendations": [
     "esbenp.prettier-vscode",

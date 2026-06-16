@@ -36,8 +36,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${GeistSans.variable} font-sans`}>{children}</body>
+    <html lang="en" className="h-full">
+      <body
+        className={`${GeistSans.variable} h-full bg-ink font-sans text-chalk text-[32px] leading-normal [text-shadow:0_-1px_1px_rgba(0,0,0,0.5)] max-[760px]:text-[24px] max-[350px]:text-[18px]`}
+      >
+        {children}
+      </body>
     </html>
   )
 }
