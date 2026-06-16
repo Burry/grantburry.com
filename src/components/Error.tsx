@@ -1,11 +1,10 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faExclamationTriangle,
   faQuestionCircle
 } from '@fortawesome/pro-duotone-svg-icons'
-import { Header, Footer, Section } from './Layout'
+import { Header, Footer, Section, Heading, linkClass } from './Layout'
 
 export type ErrorProps = {
   statusCode?: number
@@ -13,47 +12,50 @@ export type ErrorProps = {
 
 const friendlyError = (statusCode: ErrorProps['statusCode']) => {
   switch (statusCode) {
-    case 404:
+    case 404: {
       return 'Not Found'
-    case 400:
+    }
+    case 400: {
       return 'Bad Request'
-    case 500:
+    }
+    case 500: {
       return 'Server Error'
-    default:
+    }
+    default: {
       return 'Unknown Error'
+    }
   }
 }
 
-const Error: React.FC<ErrorProps> = ({ statusCode }) => {
+const ErrorView = ({ statusCode }: ErrorProps) => {
   const message = friendlyError(statusCode)
   return (
     <>
       <Header>
-        <h1>
+        <Heading level={1}>
           <FontAwesomeIcon
             icon={statusCode === 404 ? faQuestionCircle : faExclamationTriangle}
           />
           <br />
           {statusCode}
-        </h1>
+        </Heading>
       </Header>
-      <div>
-        <Head>{message}</Head>
+      <main>
         <Section>
-          <h2>{message}</h2>
-          <p>
+          <Heading level={2}>{message}</Heading>
+          <p className="my-[1em]">
             {statusCode === 404
               ? "This page isn't a thing. You clicked on a bad link or fat-fingered your keyboard. Please consider the life choices that brought you here and then don't do them again."
               : 'Please try again'}
           </p>
-          <Link href="/">
-            <a>Go Home</a>
+          <Link href="/" className={linkClass}>
+            Go Home
           </Link>
         </Section>
-      </div>
+      </main>
       <Footer />
     </>
   )
 }
 
-export default Error
+export default ErrorView

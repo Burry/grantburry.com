@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #ff0000;
+  --color-secondary: #ff3300;
+  --color-tertiary: #ff5500;
+  --color-ink: #212529;
+  --color-chalk: rgba(255, 255, 255, 0.95);
+  --font-sans:
+    var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+}
+
+/* Only global rules that Tailwind utilities can't express per element live
+   here. Everything else is styled with Tailwind classes / components. */
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    background: rgba(255, 255, 255, 0.25);
+    color: var(--color-chalk);
+    text-shadow: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-chalk);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

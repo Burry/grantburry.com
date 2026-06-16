@@ -10,19 +10,18 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies and run the development server with [Bun](https://bun.sh):
 
 ```bash
-npm run dev
-# or
-yarn dev
+bun install
+bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. The page auto-updates as you edit files.
 
 ### Font Awesome
 
-This project uses private NPM modules from [Font Awesome 5 Pro](https://fontawesome.com/pro). You will need to set `$FONTAWESOME_NPM_AUTH_TOKEN` to a valid token in your environment variables or replace it in [`.npmrc`](.npmrc) in order to install the Font Awesome packages. [See documentation](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
+This project uses private NPM modules from [Font Awesome Pro](https://fontawesome.com/pro) (pinned to the 6.x line). Set `$FONTAWESOME_NPM_AUTH_TOKEN` to a valid token in your environment (it is consumed by [`bunfig.toml`](bunfig.toml)) in order to install the Font Awesome packages. [See documentation](https://fontawesome.com/docs/web/setup/packages)
 
 ## Learn More
 
