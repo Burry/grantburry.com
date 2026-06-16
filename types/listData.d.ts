@@ -1,14 +1,7 @@
-export type ListData = Array<
-  Array<{
-    text: string
-    link?: string
-    target?: string
-    icon: {
-      type: IconProp
-      colors: {
-        primary: string
-        secondary?: string
-      }
-    }
-  }>
->
+import type { IconProp } from '@fortawesome/fontawesome-svg-core'
+
+export type ListData = {
+  text: string
+  icon: IconProp
+  iconClassName: string
+}[][]

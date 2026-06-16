@@ -5,105 +5,71 @@ import {
 } from '@fortawesome/pro-duotone-svg-icons'
 import {
   faLinkedin,
-  faTwitterSquare,
+  faXTwitter,
   faGithubSquare
 } from '@fortawesome/free-brands-svg-icons'
-import { IconProp } from '@fortawesome/fontawesome-svg-core'
-import { ActionListItemProps } from './styled-home'
+import type { IconProp } from '@fortawesome/fontawesome-svg-core'
 
-type Actions = Array<
-  Array<
-    {
-      text: string
-      link?: string
-      target?: string
-      icon: {
-        type: IconProp
-        colors: {
-          primary: string
-          secondary?: string
-        }
-      }
-    } & ActionListItemProps
-  >
->
+type Action = {
+  text: string
+  link?: string
+  target?: string
+  // Tailwind classes for the link (background + text colour)
+  linkClassName: string
+  icon: IconProp
+  // Tailwind classes for the icon (colour + FontAwesome duotone CSS vars)
+  iconClassName: string
+}
 
-const actions: Actions = [
+const actions: Action[][] = [
   [
     {
       text: 'Stalk me',
-      background: '#0a66c2',
       link: 'https://www.linkedin.com/in/burry/',
-      icon: {
-        type: faLinkedin,
-        colors: {
-          primary: '#fff'
-        }
-      }
+      linkClassName: 'bg-[#0a66c2] text-[#fff]',
+      icon: faLinkedin,
+      iconClassName: 'text-[#fff] [--fa-primary-color:#fff]'
     },
     {
-      text: 'Cancel me',
-      background: '#1DA1F2',
-      link: 'https://twitter.com/grantburry',
-      icon: {
-        type: faTwitterSquare,
-        colors: {
-          primary: '#fff'
-        }
-      }
+      text: 'Ratio me',
+      link: 'https://x.com/grantburry',
+      linkClassName: 'bg-[#000] text-[#fff]',
+      icon: faXTwitter,
+      iconClassName: 'text-[#fff] [--fa-primary-color:#fff]'
     },
     {
       text: 'Fork me',
-      background: '#fff',
-      color: '#212529',
       link: 'https://github.com/Burry/grantburry.com',
-      icon: {
-        type: faGithubSquare,
-
-        colors: {
-          primary: '#212529'
-        }
-      }
+      linkClassName: 'bg-[#fff] text-[#212529]',
+      icon: faGithubSquare,
+      iconClassName: 'text-[#212529] [--fa-primary-color:#212529]'
     }
   ],
   [
     {
       text: 'Spam me',
-      background: '#eee',
-      color: '#212529',
       link: 'mailto:grant@burry.me?subject=Hello!',
       target: '_self',
-      icon: {
-        type: faEnvelopeSquare,
-        colors: {
-          primary: '#fff',
-          secondary: '#09f'
-        }
-      }
+      linkClassName: 'bg-[#eee] text-[#212529]',
+      icon: faEnvelopeSquare,
+      iconClassName:
+        'text-[#fff] [--fa-primary-color:#fff] [--fa-secondary-color:#09f]'
     },
     {
       text: 'Bribe me',
       link: 'https://cash.app/$grant',
-      background: 'limegreen',
-      icon: {
-        type: faUsdSquare,
-        colors: {
-          primary: 'limegreen',
-          secondary: '#fff'
-        }
-      }
+      linkClassName: 'bg-[limegreen] text-[#fff]',
+      icon: faUsdSquare,
+      iconClassName:
+        'text-[limegreen] [--fa-primary-color:limegreen] [--fa-secondary-color:#fff]'
     },
     {
       text: 'Arrest me',
-      background: '#f00',
       link: 'https://tips.fbi.gov',
-      icon: {
-        type: faSirenOn,
-        colors: {
-          primary: '#fff',
-          secondary: '#0cf'
-        }
-      }
+      linkClassName: 'bg-[#f00] text-[#fff]',
+      icon: faSirenOn,
+      iconClassName:
+        'text-[#fff] [--fa-primary-color:#fff] [--fa-secondary-color:#0cf]'
     }
   ]
 ]

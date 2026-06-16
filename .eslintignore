@@ -1,6 +1,0 @@
-node_modules
-out
-public/workbox*
-coverage
-.next
-.vercel

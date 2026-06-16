@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -13,18 +12,22 @@ export type ErrorProps = {
 
 const friendlyError = (statusCode: ErrorProps['statusCode']) => {
   switch (statusCode) {
-    case 404:
+    case 404: {
       return 'Not Found'
-    case 400:
+    }
+    case 400: {
       return 'Bad Request'
-    case 500:
+    }
+    case 500: {
       return 'Server Error'
-    default:
+    }
+    default: {
       return 'Unknown Error'
+    }
   }
 }
 
-const Error: React.FC<ErrorProps> = ({ statusCode }) => {
+const ErrorView = ({ statusCode }: ErrorProps) => {
   const message = friendlyError(statusCode)
   return (
     <>
@@ -38,7 +41,6 @@ const Error: React.FC<ErrorProps> = ({ statusCode }) => {
         </h1>
       </Header>
       <div>
-        <Head>{message}</Head>
         <Section>
           <h2>{message}</h2>
           <p>
@@ -46,9 +48,7 @@ const Error: React.FC<ErrorProps> = ({ statusCode }) => {
               ? "This page isn't a thing. You clicked on a bad link or fat-fingered your keyboard. Please consider the life choices that brought you here and then don't do them again."
               : 'Please try again'}
           </p>
-          <Link href="/">
-            <a>Go Home</a>
-          </Link>
+          <Link href="/">Go Home</Link>
         </Section>
       </div>
       <Footer />
@@ -56,4 +56,4 @@ const Error: React.FC<ErrorProps> = ({ statusCode }) => {
   )
 }
 
-export default Error
+export default ErrorView

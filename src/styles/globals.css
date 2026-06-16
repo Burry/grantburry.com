@@ -1,0 +1,143 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #ff0000;
+  --color-secondary: #ff3300;
+  --color-tertiary: #ff5500;
+  --color-ink: #212529;
+  --color-chalk: rgba(255, 255, 255, 0.95);
+  --font-sans:
+    var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+}
+
+@layer base {
+  html,
+  body,
+  #__next {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: var(--color-ink);
+    color: var(--color-chalk);
+    font-family: var(--font-sans);
+    font-size: 32px;
+    line-height: 1.5;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  @media screen and (max-width: 760px) {
+    body {
+      font-size: 24px;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    body {
+      font-size: 18px;
+    }
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    background: rgba(255, 255, 255, 0.25);
+    color: var(--color-chalk);
+    text-shadow: none;
+  }
+
+  a {
+    color: var(--color-chalk);
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.25) none repeat scroll 0 0;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0 0.25rem;
+    transform: skewX(-5deg);
+    position: relative;
+    display: inline-block;
+  }
+
+  a:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  @media (hover) {
+    a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  a:active {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  a::after {
+    content: '»';
+    margin-left: 0.5rem;
+    font-size: 3rem;
+    line-height: 0;
+    position: relative;
+    top: 0.125rem;
+  }
+
+  @media screen and (max-width: 760px) {
+    a::after {
+      font-size: 2rem;
+    }
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #fff;
+    margin: 0 auto 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  /* Preflight resets paragraph margins; restore the default block spacing. */
+  p {
+    margin: 1em 0;
+  }
+
+  /* Visible keyboard-focus indicator (buttons drop the default outline). */
+  :focus-visible {
+    outline: 2px solid var(--color-chalk);
+    outline-offset: 2px;
+  }
+}
+
+/* Honour users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

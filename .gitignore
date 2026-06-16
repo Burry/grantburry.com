@@ -35,8 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# service worker
-workbox-*.js
-sw.js
-sw-*.js
+# service worker (Serwist)
+public/sw*
 *.js.map
